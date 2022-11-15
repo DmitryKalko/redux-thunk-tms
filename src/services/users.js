@@ -1,6 +1,8 @@
 import axios from "axios";
 import { addUsers } from "../redux/users/actions";
 
+
+
 export const fetchUsers = () => {  // по сути эта функция это асинхронный action
 	// это функция которая возвращает функцию, которая параметром принимает dispatch
 	return function (dispatch) {
@@ -13,3 +15,6 @@ export const fetchUsers = () => {  // по сути эта функция это
 		});
 	};
 };
+
+// мидлеваре позволяет использовать dispatch внутри вообще сторонних функций
+// если посмотреть то вы поймете что мы его сюда нигде не передаем
